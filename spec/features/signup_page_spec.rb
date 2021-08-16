@@ -16,7 +16,7 @@ feature 'signup page' do
     click_button('Submit')
  
     connection = PG.connect(dbname: 'makersbnb_test')
-    result = connection.exec("SELECT * FROM users;").add_a
+    result = connection.exec("SELECT * FROM users;").to_a
 
     expect(result[0]['username']).to eq('Dillon')
     expect(result[0]['first_name']).to eq('Dylan')
