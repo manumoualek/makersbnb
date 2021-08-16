@@ -1,4 +1,5 @@
 CREATE DATABASE MakersBnB; 
+
 CREATE TABLE users (
 UserID SERIAL PRIMARY KEY,
 Username VARCHAR (60),
@@ -11,6 +12,7 @@ Email VARCHAR (60)
 
 
 CREATE DATABASE MakersBnB_test; 
+
 CREATE TABLE users (
 UserID SERIAL PRIMARY KEY,
 Username VARCHAR (60),
