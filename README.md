@@ -16,9 +16,9 @@ So that I can find a space to hire
 I want to be able to sign in
 
 1c)
-As a host of Makers Bnb
+As a host of Makers BnB
 So that I can rent something out
-I want to able to list a space
+I want to be able to list a space
 ```
 
 
@@ -28,7 +28,7 @@ I want to able to list a space
 ---------------------------------------------
 
 2a) 
-As a host of Makers Bnb
+As a host of Makers BnB
 So that I can rent multiple things out
 I want to able to list spaces
 ```
