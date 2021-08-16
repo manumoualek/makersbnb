@@ -12,7 +12,7 @@ I want to be able to an create an account
 
 1b)
 As a user of Makers BnB
-So that I can find a sapce to hire
+So that I can find a space to hire
 I want to be able to sign in
 
 1c)
