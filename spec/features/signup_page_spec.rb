@@ -23,6 +23,5 @@ feature 'signup page' do
     expect(result[0]['second_name']).to eq('Hancock')
     expect(result[0]['password']).to eq('jellySNAKES123')
     expect(result[0]['email']).to eq('Dillon@yahoo.co.uk')
-
   end
 end
