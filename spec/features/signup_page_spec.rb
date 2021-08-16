@@ -17,7 +17,6 @@ feature 'signup page' do
  
     connection = PG.connect(dbname: 'makersbnb_test')
     result = connection.exec("SELECT * FROM users;").to_a
-    p result
 
     expect(result[0]['username']).to eq('Dillon')
     expect(result[0]['first_name']).to eq('Dylan')
