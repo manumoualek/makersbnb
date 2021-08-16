@@ -11,6 +11,11 @@ So that I list a space
 I want to be able to an create an account 
 
 1b)
+As a user of Makers BnB
+So that I can find a sapce to hire
+I want to be able to sign in
+
+1c)
 As a host of Makers Bnb
 So that I can rent something out
 I want to able to list a space
