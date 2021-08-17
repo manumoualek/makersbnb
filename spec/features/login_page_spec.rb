@@ -11,4 +11,13 @@ feature 'Login page 'do
     click_button('login')
   end
 
+  scenario 'checks if the data entered is a valid log in' do
+    visit '/login'
+    fill_in('username', with: "testlogin1")
+    fill_in('password', with: "testpassword1")
+    click_button('login')
+
+    expect(page).to have_content "Welcome back"
+  end 
+
 end 
