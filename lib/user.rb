@@ -8,13 +8,16 @@ class User
     end
     
     if self.username_available?(username: username) == false
-      raise('Username already exists')
+      return '/username_already_exists'
+
     else
       connection.exec(
       "INSERT INTO users (username, first_name, second_name, password, email)
        VALUES ('#{username}', '#{first_name}', 
       '#{second_name}', '#{password}', '#{email}');"
     )
+      return '/login'
+
     end
   end
 
