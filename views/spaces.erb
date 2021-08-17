@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spaces</title>
+    <title>All Spaces</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
   <h1>Book a space!</h1><br><br>
-  <button><a href="./spaces.erb">List a space</a></button><br><br>
+  <button><a href="./spaces/new">List a space</a></button><br><br>
   <form>
-    <label for="available_from">Available from</label><br><br>
-    <input type="date" id="available_from" name="available_from"><br><br>
-    <label for="available_to">Available to</label><br><br>
-    <input type="date" id="available_from" name="available_to"><br><br>
-    <input type="submit" value="Submit">
+    <label for="user_available_from">Available from (DD/MM/YY)</label><br><br>
+    <input type="date" id="user_available_from" name="user_available_from"><br><br>
+
+    <label for="user_available_to">Available to (DD/MM/YY)</label><br><br>
+    <input type="date" id="user_available_to" name="user_available_to"><br><br>
+
+    <input type="submit" value="List spaces">
   </form>
+
+
   </body>
 </html>
 
