@@ -6,11 +6,16 @@ class User
     else
       connection = PG.connect(dbname: 'makerbnb')
     end
-    connection.exec(
+    
+    if self.username_available?(username: username) == false
+      raise('Username already exists')
+    else
+      connection.exec(
       "INSERT INTO users (username, first_name, second_name, password, email)
        VALUES ('#{username}', '#{first_name}', 
       '#{second_name}', '#{password}', '#{email}');"
     )
+    end
   end
 
   def self.username_available?(username:)
@@ -21,7 +26,7 @@ class User
     end
     result = connection.exec("SELECT * FROM users WHERE username = '#{username}';").to_a
 
-    if result.length == 0
+    if result.length == 0 
       true
     else
       false
