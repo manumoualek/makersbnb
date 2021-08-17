@@ -14,7 +14,16 @@ class User
       con = PG.connect(dbname: 'makersbnb')
     end 
     
-    login_details = con.exec("SELECT username, password FROM users WHERE username LIKE('%#{username}%');").to_a
+    login_details = con.exec("SELECT username, password FROM users WHERE username LIKE('%#{username}%');")
+
+    login_details.map do |user|
+      User.new(username: user['username'])
+    end
+    p login_details
+
+
+    #p login_details.map{User.new(username:)}
+    
 
     if password == login_details[0]["password"] #This is the format for accessing certain info while using the .to_a
       @logged_in = true

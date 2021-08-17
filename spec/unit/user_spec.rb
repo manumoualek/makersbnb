@@ -23,8 +23,7 @@ describe User do
     end 
 
     it 'returns true when the log in info is correct' do 
-      # temp = User.auth(username: 'testlogin1', password:'testpassword1')
-      # expect(User).auth(username: 'testlogin1', password:'testpassword1').to eq true
+      
       
     end 
 
