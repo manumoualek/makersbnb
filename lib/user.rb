@@ -12,4 +12,6 @@ class User
       '#{second_name}', '#{password}', '#{email}');"
     )
   end
+
+  
 end
