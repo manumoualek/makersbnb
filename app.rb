@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'pg'
+require_relative './lib/user'
 
 class Makers_BnB < Sinatra::Base 
   
@@ -8,12 +9,13 @@ class Makers_BnB < Sinatra::Base
   end
 
   post '/signup' do
-    connection = PG.connect(dbname: 'makersbnb_test')
-    connection.exec(
-      "INSERT INTO users (username, first_name, second_name, password, email)
-       VALUES ('#{params[:username]}', '#{params[:first_name]}', 
-      '#{params[:second_name]}', '#{params[:password]}', '#{params[:email]}');"
-    )
+    User.create(
+      username: params[:username],
+      first_name: params[:first_name],
+      second_name: params[:second_name],
+      password: params[:password],
+      email: params[:email])
+      # redirect '##########'
   end
 
   run! if app_file == $0

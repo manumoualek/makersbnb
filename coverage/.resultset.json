@@ -1,8 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nazir/Projects/makersbnb/app.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/app.rb": {
         "lines": [
+          1,
           1,
           1,
           null,
@@ -14,7 +15,8 @@
           null,
           1,
           1,
-          1,
+          null,
+          null,
           null,
           null,
           null,
@@ -25,7 +27,26 @@
           null
         ]
       },
-      "/Users/nazir/Projects/makersbnb/spec/features/signup_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/lib/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          0,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/signup_page_spec.rb": {
         "lines": [
           1,
           null,
@@ -56,12 +77,35 @@
           null
         ]
       },
-      "/Users/nazir/Projects/makersbnb/spec/unit/test_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/signup_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/test_spec.rb": {
         "lines": [
 
         ]
       }
     },
-    "timestamp": 1629194490
+    "timestamp": 1629196620
   }
 }
