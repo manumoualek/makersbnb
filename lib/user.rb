@@ -4,7 +4,7 @@ class User
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
     else
-      connection = PG.connect(dbname: 'makerbnb')
+      connection = PG.connect(dbname: 'makersbnb')
     end
     
     if self.username_available?(username: username) == false
@@ -22,7 +22,7 @@ class User
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
     else
-      connection = PG.connect(dbname: 'makerbnb')
+      connection = PG.connect(dbname: 'makersbnb')
     end
     result = connection.exec("SELECT * FROM users WHERE username = '#{username}';").to_a
 
