@@ -21,6 +21,10 @@ class Makers_BnB < Sinatra::Base
 
   end
 
+  get '/spaces' do
+    erb :spaces
+  end
+
   get '/username_already_exists' do
     erb(:username_already_exists)
   end
