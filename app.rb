@@ -12,14 +12,8 @@ class Makers_BnB < Sinatra::Base
   end 
 
   post '/testinglogin' do 
-    p @login = User.auth(username: params[:username], password: params[:password])
-
-    if @login == true #Can we remove the logic?
-      redirect '/spaces'
-    else
-      redirect '/login'
-    end
-    
+    @auth_page = User.auth(username: params[:username], password: params[:password])
+    redirect @auth_page     #The page it will redirect to is based on whether log in is successful or not.
   end 
 
   get '/spaces' do
