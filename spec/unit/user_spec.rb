@@ -18,19 +18,25 @@ describe "users" do
   end
 
   describe "check method" do
+    it "returns false if username already exists " do
+      connection = PG.connect(dbname: 'makersbnb_test')
 
-    connection = PG.connect(dbname: 'makersbnb_test')
       connection.exec("INSERT INTO users 
         (username, first_name, second_name, password, email)
         VALUES ('Dillon', 'Dylan', 
         'Hancock', 'jellyBUBBLES123', 'dylan@gmail.com');"
       )
-
-    it "returns false if username already exists " do
       expect(User.username_available?(username: 'Dillon')).to eq(false)
     end
 
     it "returns true if username doesn't already exist" do
+      connection = PG.connect(dbname: 'makersbnb_test')
+      
+      connection.exec("INSERT INTO users 
+        (username, first_name, second_name, password, email)
+        VALUES ('Dillon', 'Dylan', 
+        'Hancock', 'jellyBUBBLES123', 'dylan@gmail.com');"
+      )
       expect(User.username_available?(username: 'Peppa')).to eq(true)
     end
   end
