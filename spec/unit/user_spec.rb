@@ -5,7 +5,8 @@ describe "users" do
     it "User can create an account and it stores in the database" do
       connection = PG.connect(dbname: 'makersbnb_test')
 
-      User.create(username: "Nazir123", first_name: "Nazir", second_name: "Shaikh", password: "jellySNAKES456", email: "Nazir@gogoanime.com")
+      User.create(username: "Nazir123", first_name: "Nazir", 
+        second_name: "Shaikh", password: "jellySNAKES456", email: "Nazir@gogoanime.com")
 
       result = connection.exec("SELECT * FROM users;").to_a
 
@@ -15,12 +16,23 @@ describe "users" do
       expect(result[0]['password']).to eq('jellySNAKES456')
       expect(result[0]['email']).to eq('Nazir@gogoanime.com')
     end
+
+    it "User cannot create an account when their chosen username already exists" do
+      connection = PG.connect(dbname: 'makersbnb_test')
+
+      User.create(username: "Nazir123", first_name: "Nazir", 
+        second_name: "Shaikh", password: "jellySNAKES456", email: "Nazir@gogoanime.com")
+
+      expect{ User.create(username: "Nazir123", first_name: "Nazir", 
+        second_name: "Shaikh", password: "jellySNAKES456", 
+        email: "Nazir@gogoanime.com") }.to raise_error ("Username already exists")
+    end
   end
 
   describe "check method" do
     it "returns false if username already exists " do
       connection = PG.connect(dbname: 'makersbnb_test')
-
+      
       connection.exec("INSERT INTO users 
         (username, first_name, second_name, password, email)
         VALUES ('Dillon', 'Dylan', 
