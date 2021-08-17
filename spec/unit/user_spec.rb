@@ -23,9 +23,9 @@ describe "users" do
       User.create(username: "Nazir123", first_name: "Nazir", 
         second_name: "Shaikh", password: "jellySNAKES456", email: "Nazir@gogoanime.com")
 
-      expect{ User.create(username: "Nazir123", first_name: "Nazir", 
+      expect(User.create(username: "Nazir123", first_name: "Nazir", 
         second_name: "Shaikh", password: "jellySNAKES456", 
-        email: "Nazir@gogoanime.com") }.to raise_error ("Username already exists")
+        email: "Nazir@gogoanime.com")).to eq('/username_already_exists')
     end
   end
 

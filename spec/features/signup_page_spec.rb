@@ -42,6 +42,7 @@ feature 'signup page' do
     fill_in('email', with: 'Dillon@brawlstarsdevteam.com')
     click_button('Submit')
 
+    expect(current_path).to eq('/username_already_exists')
     expect(page).to have_content('Username already exists, please try another.')
   end
 end
