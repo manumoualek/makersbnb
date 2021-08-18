@@ -29,6 +29,7 @@ class Makers_BnB < Sinatra::Base
   end
 
   get '/spaces' do
+    @logged_in = session[:logged_in]
     erb :spaces
   end
 
