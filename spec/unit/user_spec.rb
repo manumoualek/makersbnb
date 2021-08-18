@@ -1,6 +1,6 @@
 require_relative '../../lib/user.rb'
 
-describe "users" do
+describe User do
   describe "create method" do
     it "User can create an account and it stores in the database" do
       connection = PG.connect(dbname: 'makersbnb_test')
@@ -51,5 +51,18 @@ describe "users" do
       )
       expect(User.username_available?(username: 'Peppa')).to eq(true)
     end
+  end
+  
+  describe '#auth' do 
+    it 'redirects to the spaces page if username and passwords match' do 
+      temp = User.auth(username: 'testlogin1', password:'testpassword1')
+      expect(temp).to eq true
+    end 
+
+
+    it 'redirects to the login page if the username and passwords DO NOT match' do 
+      temp = User.auth(username: 'testlogin1', password:'WRONGPASSWORD')
+      expect(temp).to eq false
+    end 
   end
 end
