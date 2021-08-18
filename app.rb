@@ -1,10 +1,15 @@
 require 'sinatra/base'
 require 'pg'
+require 'sinatra/reloader'
 require_relative './lib/user'
 require_relative './lib/space'
 
 class Makers_BnB < Sinatra::Base 
   
+  configure :development do
+    register Sinatra:Reloader
+  end
+
   get '/signup' do
     erb(:signup)
   end
