@@ -10,11 +10,12 @@ describe User do
 
       result = connection.exec("SELECT * FROM users;").to_a
 
-      expect(result[0]['username']).to eq('Nazir123')
-      expect(result[0]['first_name']).to eq('Nazir')
-      expect(result[0]['second_name']).to eq('Shaikh')
-      expect(result[0]['password']).to eq('jellySNAKES456')
-      expect(result[0]['email']).to eq('Nazir@gogoanime.com')
+      # Index 1 because setup_test_database.rb inserts a test every time rspec runs
+      expect(result[1]['username']).to eq('Nazir123')
+      expect(result[1]['first_name']).to eq('Nazir')
+      expect(result[1]['second_name']).to eq('Shaikh')
+      expect(result[1]['password']).to eq('jellySNAKES456')
+      expect(result[1]['email']).to eq('Nazir@gogoanime.com')
     end
 
     it "User cannot create an account when their chosen username already exists" do

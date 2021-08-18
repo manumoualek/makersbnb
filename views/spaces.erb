@@ -8,21 +8,42 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <% if @logged_in %>
-      <h1>Book a space!</h1><br><br>
-      <button><a href="./spaces/new">List a space</a></button><br><br>
-      <form>
+
+  <h1>Book a space!</h1><br><br>
+  <button><a href="spaces/new" style="text-decoration: none;">List a space</a></button><br><br>
+  
+  <form>
         <label for="user_available_from">Available from (DD/MM/YY)</label><br><br>
         <input type="date" id="user_available_from" name="user_available_from"><br><br>
 
+
         <label for="user_available_to">Available to (DD/MM/YY)</label><br><br>
         <input type="date" id="user_available_to" name="user_available_to"><br><br>
-
+    
         <input type="submit" value="List spaces">
       </form>
+  <!-- Add filter functionality if time on friday -->
     
-   <% else %> 
-      <h1> Login to view Spaces <h1> 
-   <% end %>  
+   <ul>
+    <% @spaces.each do |space| %>
+      <hr>
+      <li style="list-style-type: none;">
+      <a href="/booking" style="text-decoration: none;"><%= space['space_name'] %></a><br>
+      <b>Description:</b>
+      <%= space['space_description'] %><br>
+      <b>Price per night:</b>
+      £<%= space['space_price'] %><br>
+      <b>Available_from:</b>
+      <%= space['available_from'] %><br>
+      <b>Available_to:</b>
+      <%= space['available_to'] %>
+      </li>
+      <br>
+      <hr>
+    <% end %>
+  </ul>
+    
+   
+
   </body>
 </html>
