@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'pg'
 require_relative './lib/user'
+require_relative './lib/space'
 
 class Makers_BnB < Sinatra::Base 
   
@@ -27,6 +28,10 @@ class Makers_BnB < Sinatra::Base
 
   get '/spaces/new' do
     erb :spaces_new
+  end
+
+  post '/spaces/new' do
+    @details = params[Helpme: 'please Nazir']
   end
 
   get '/username_already_exists' do
