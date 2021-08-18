@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
   <h1>Book a space!</h1><br><br>
   <button><a href="spaces/new" style="text-decoration: none;">List a space</a></button><br><br>
-  <!-- add a feature test to above -->
+  
   <form>
-    <label for="user_available_from">Available from (DD/MM/YY)</label><br><br>
-    <input type="date" id="user_available_from" name="user_available_from"><br><br>
+        <label for="user_available_from">Available from (DD/MM/YY)</label><br><br>
+        <input type="date" id="user_available_from" name="user_available_from"><br><br>
 
-    <label for="user_available_to">Available to (DD/MM/YY)</label><br><br>
-    <input type="date" id="user_available_to" name="user_available_to"><br><br>
 
-    <!-- Add filter functionality if time on friday -->
-
-    <input type="submit" value="List spaces">
-  </form>
-  <ul>
+        <label for="user_available_to">Available to (DD/MM/YY)</label><br><br>
+        <input type="date" id="user_available_to" name="user_available_to"><br><br>
+    
+        <input type="submit" value="List spaces">
+      </form>
+  <!-- Add filter functionality if time on friday -->
+    
+   <ul>
     <% @spaces.each do |space| %>
       <hr>
       <li style="list-style-type: none;">
@@ -40,7 +42,8 @@
       <hr>
     <% end %>
   </ul>
+    
+   
 
   </body>
 </html>
-

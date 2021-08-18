@@ -6,10 +6,16 @@ require_relative './lib/space'
 
 class Makers_BnB < Sinatra::Base 
   
+  enable :sessions
+  
   configure :development do
     register Sinatra::Reloader
   end
-
+  
+  get '/' do
+    erb(:homepage)
+  end
+  
   get '/signup' do
     erb(:signup)
   end
@@ -22,16 +28,28 @@ class Makers_BnB < Sinatra::Base
         password: params[:password],
         email: params[:email]))
   end
+  
+  get '/login' do 
+    @logged_in = session[:logged_in]
+    erb :login
+  end 
 
-  get '/login' do
+  post '/testinglogin' do
 
+    session[:logged_in] = User.auth(username: params[:username], password: params[:password])
+    @logged_in = session[:logged_in]
+    if @logged_in
+      redirect '/spaces'
+    else
+      redirect '/login'
+    end
   end
-
+  
   get '/spaces' do
     @spaces = Space.all
     erb :spaces
   end
-
+  
   get '/spaces/new' do
     erb :spaces_new
   end
