@@ -7,7 +7,7 @@ require_relative './lib/space'
 class Makers_BnB < Sinatra::Base 
   
   configure :development do
-    register Sinatra:Reloader
+    register Sinatra::Reloader
   end
 
   get '/signup' do
