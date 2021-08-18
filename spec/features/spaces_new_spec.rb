@@ -14,7 +14,7 @@ feature "List a space" do
     expect(result[0]['space_name']).to eq('Valley of the end')
     expect(result[0]['space_description']).to eq('Very big valley with lots of end yes')
     expect(result[0]['space_price']).to eq('95')
-    expect(result[0]['available_from']).to eq('2021/05/05')
-    expect(result[0]['available_to']).to eq('2021/05/06')
+    expect(result[0]['available_from']).to eq('2021-05-05')
+    expect(result[0]['available_to']).to eq('2021-05-06')
   end
 end
