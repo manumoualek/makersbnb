@@ -13,4 +13,13 @@ class Space
       '#{space_price}', '#{available_from}', '#{available_to}');"
     )
   end
+  def self.all
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+
+    connection.exec("SELECT * FROM spaces;")
+  end
 end

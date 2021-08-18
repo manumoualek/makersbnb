@@ -28,6 +28,7 @@ class Makers_BnB < Sinatra::Base
   end
 
   get '/spaces' do
+    @spaces = Space.all
     erb :spaces
   end
 
@@ -43,10 +44,15 @@ class Makers_BnB < Sinatra::Base
       available_from: params['listing_available_from'],
       available_to: params['listing_available_to']
     )
+    redirect '/spaces'
   end
 
   get '/username_already_exists' do
     erb(:username_already_exists)
+  end
+
+  get '/booking' do
+    
   end
 
   run! if app_file == $0
