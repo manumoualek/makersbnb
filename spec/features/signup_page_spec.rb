@@ -18,11 +18,12 @@ feature 'signup page' do
     connection = PG.connect(dbname: 'makersbnb_test')
     result = connection.exec("SELECT * FROM users;").to_a
 
-    expect(result[0]['username']).to eq('Dillon')
-    expect(result[0]['first_name']).to eq('Dylan')
-    expect(result[0]['second_name']).to eq('Hancock')
-    expect(result[0]['password']).to eq('jellySNAKES123')
-    expect(result[0]['email']).to eq('Dillon@yahoo.co.uk')
+    # Index 1 because setup_test_database.rb inserts a test every time rspec runs
+    expect(result[1]['username']).to eq('Dillon')
+    expect(result[1]['first_name']).to eq('Dylan')
+    expect(result[1]['second_name']).to eq('Hancock')
+    expect(result[1]['password']).to eq('jellySNAKES123')
+    expect(result[1]['email']).to eq('Dillon@yahoo.co.uk')
   end
 
   scenario "User gets message when trying to use a username thats already taken" do
