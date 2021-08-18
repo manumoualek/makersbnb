@@ -4,6 +4,10 @@ require_relative './lib/user'
 
 class Makers_BnB < Sinatra::Base 
   
+  get '/' do
+    erb(:index)
+  end
+  
   get '/signup' do
     erb(:signup)
   end
