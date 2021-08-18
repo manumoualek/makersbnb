@@ -1,7 +1,13 @@
 require 'sinatra/base'
 require_relative 'lib/user.rb'
+require 'sinatra/reloader'
 
 class Makers_BnB < Sinatra::Base 
+  enable :sessions
+  
+  configure :development do
+    register Sinatra::Reloader
+  end
 
   get '/' do 
     "Sign up page"
@@ -11,10 +17,21 @@ class Makers_BnB < Sinatra::Base
     erb :login
   end 
 
-  post '/testinglogin' do 
-    @auth_page = User.auth(username: params[:username], password: params[:password])
-    redirect @auth_page     #The page it will redirect to is based on whether log in is successful or not.
-  end 
+  # post '/testinglogin' do 
+  #   @auth_page = User.auth(username: params[:username], password: params[:password])
+  #   redirect @auth_page     #The page it will redirect to is based on whether log in is successful or not.
+  # end 
+
+  post '/testinglogin' do
+
+    session[:logged_in] = User.auth(username: params[:username], password: params[:password])
+    @logged_in = session[:logged_in]
+    if @logged_in
+      redirect '/spaces'
+    else
+      redirect '/login'
+    end  
+  end
 
   get '/spaces' do
     erb :spaces

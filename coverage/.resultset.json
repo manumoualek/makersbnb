@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Student/Projects/makersbnb/app.rb": {
+      "/Users/manu/Projects/makersbnb/app.rb": {
         "lines": [
           1,
           1,
@@ -16,20 +16,29 @@
           3,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
           1,
           2,
-          0,
-          null,
-          null,
-          1,
-          0,
           null,
           null,
           1,
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/lib/user.rb": {
+      "/Users/manu/Projects/makersbnb/lib/user.rb": {
         "lines": [
           1,
           null,
@@ -49,21 +58,21 @@
           null,
           4,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
           4,
+          null,
+          null,
+          null,
+          null,
+          null,
           4,
+          3,
           null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
+          1,
           null,
           null,
           null,
@@ -74,7 +83,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/login_page_spec.rb": {
+      "/Users/manu/Projects/makersbnb/spec/features/login_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -95,23 +104,23 @@
           1,
           1,
           null,
-          0,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/test_spec.rb": {
+      "/Users/manu/Projects/makersbnb/spec/features/test_spec.rb": {
         "lines": [
 
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/unit/test_spec.rb": {
+      "/Users/manu/Projects/makersbnb/spec/unit/test_spec.rb": {
         "lines": [
 
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/unit/user_spec.rb": {
+      "/Users/manu/Projects/makersbnb/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -120,14 +129,14 @@
           1,
           1,
           1,
-          0,
+          1,
           null,
           null,
           null,
           null,
           1,
           1,
-          0,
+          1,
           null,
           null,
           null,
@@ -152,6 +161,6 @@
         ]
       }
     },
-    "timestamp": 1629214272
+    "timestamp": 1629281080
   }
 }

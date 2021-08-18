@@ -1,11 +1,6 @@
 require 'pg'
 
 class User
- attr_accessor :logged_in
-
-  def self.initialize
-    @logged_in = nil
-  end 
 
   def self.auth(username:, password:)
     if ENV['ENVIRONMENT'] == 'test'
@@ -13,29 +8,31 @@ class User
     else
       con = PG.connect(dbname: 'makersbnb')
     end 
+
     
-    login_details = con.exec("SELECT username, password FROM users WHERE username LIKE('%#{username}%');")
-
-    login_details.map do |user|
-      User.new(username: user['username'])
-    end
-    p login_details
-
-
-    #p login_details.map{User.new(username:)}
-    
-
-    if password == login_details[0]["password"] #This is the format for accessing certain info while using the .to_a
-      @logged_in = true
-      newpage = '/spaces'
+     
+    login_details = con.exec("SELECT * FROM users WHERE username ='#{username}';").to_a
+    if login_details.length == 0
+      return false 
     else
-      @logged_in = false
-      newpage = '/login'
-    end
-  end 
-
-  def logged_in
-    return @logged_in
-  end 
-
+      if password == login_details[0]["password"] #This is the format for accessing certain info while using the .to_a
+        true
+      else
+        false
+      end   
+    end  
+  end
+  
+  # def self.test
+  #   if ENV['ENVIRONMENT'] == 'test'
+  #     con = PG.connect(dbname: 'makersbnb_test')
+  #   else
+  #     con = PG.connect(dbname: 'makersbnb')
+  #   end 
+    
+     
+  #   p login_details = con.exec("SELECT username, password FROM users WHERE username LIKE('test');").to_a
+  
+  # end  
 end 
+
