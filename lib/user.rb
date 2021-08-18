@@ -22,17 +22,5 @@ class User
       end   
     end  
   end
-  
-  # def self.test
-  #   if ENV['ENVIRONMENT'] == 'test'
-  #     con = PG.connect(dbname: 'makersbnb_test')
-  #   else
-  #     con = PG.connect(dbname: 'makersbnb')
-  #   end 
-    
-     
-  #   p login_details = con.exec("SELECT username, password FROM users WHERE username LIKE('test');").to_a
-  
-  # end  
 end 
 
