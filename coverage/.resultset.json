@@ -1,8 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nazir/Projects/makersbnb/app.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/app.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -27,6 +28,18 @@
           null,
           null,
           1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           null,
           null,
@@ -34,7 +47,7 @@
           null
         ]
       },
-      "/Users/nazir/Projects/makersbnb/lib/user.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/lib/user.rb": {
         "lines": [
           1,
           null,
@@ -76,7 +89,34 @@
           null
         ]
       },
-      "/Users/nazir/Projects/makersbnb/spec/features/signup_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/lib/space.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/signup_page_spec.rb": {
         "lines": [
           1,
           null,
@@ -128,7 +168,31 @@
           null
         ]
       },
-      "/Users/nazir/Projects/makersbnb/spec/unit/user_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/spaces_new_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -188,6 +252,6 @@
         ]
       }
     },
-    "timestamp": 1629217917
+    "timestamp": 1629284338
   }
 }
