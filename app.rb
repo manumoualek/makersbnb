@@ -9,11 +9,16 @@ class Makers_BnB < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do 
+  get '/' do
+    "Homepage"
+  end
+
+  get '/signup' do 
     "Sign up page"
    end
 
   get '/login' do 
+    @logged_in = session[:logged_in]
     erb :login
   end 
 
@@ -29,7 +34,6 @@ class Makers_BnB < Sinatra::Base
   end
 
   get '/spaces' do
-    @logged_in = session[:logged_in]
     erb :spaces
   end
 
