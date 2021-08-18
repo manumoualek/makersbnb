@@ -1,0 +1,21 @@
+-- Create table in makersbnb 
+
+CREATE TABLE spaces (
+spaceID SERIAL PRIMARY KEY,
+space_name VARCHAR (60),
+space_description VARCHAR (60),
+space_price VARCHAR (60)
+available_from DATE,
+available_to DATE
+); 
+
+-- Create table in makersbnb_test.
+
+CREATE TABLE spaces (
+spaceID SERIAL PRIMARY KEY,
+space_name VARCHAR (60),
+space_description VARCHAR (60),
+space_price VARCHAR (60),
+available_from DATE,
+available_to DATE
+); 
