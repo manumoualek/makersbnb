@@ -9,7 +9,7 @@
   </head>
   <body>
   <h1>Book a space!</h1><br><br>
-  <button><a href="./spaces/new">List a space</a></button><br><br>
+  <button><a href="spaces/new" style="text-decoration: none;">List a space</a></button><br><br>
   <!-- add a feature test to above -->
   <form>
     <label for="user_available_from">Available from (DD/MM/YY)</label><br><br>
@@ -24,7 +24,8 @@
   </form>
   <ul>
     <% @spaces.each do |space| %>
-      <li>
+      <hr>
+      <li style="list-style-type: none;">
       <a href="/booking" style="text-decoration: none;"><%= space['space_name'] %></a><br>
       <b>Description:</b>
       <%= space['space_description'] %><br>
@@ -35,6 +36,8 @@
       <b>Available_to:</b>
       <%= space['available_to'] %>
       </li>
+      <br>
+      <hr>
     <% end %>
   </ul>
 

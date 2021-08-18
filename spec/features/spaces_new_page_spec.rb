@@ -1,5 +1,11 @@
-feature "List a space" do
-  scenario "User can submit their listing details" do
+feature "List a space page" do
+  scenario "User can visit the page" do
+    visit('/spaces/new')
+    expect(page).to have_content('List a space!')
+  end
+
+  scenario "User creates a space row in database and gets redirected to page with
+  spaces, should see their own space that they just made" do
     visit('/spaces/new')
     fill_in('listing_name', with: 'Valley of the end')
     fill_in('listing_description', with: 'Very big valley with lots of end yes')
@@ -16,5 +22,14 @@ feature "List a space" do
     expect(result[0]['space_price']).to eq('95.00')
     expect(result[0]['available_from']).to eq('2021-05-05')
     expect(result[0]['available_to']).to eq('2021-05-06')
+
+    expect(current_path).to eq('/spaces')
+    expect(page).to have_content('Valley of the end')
+    expect(page).to have_content('Very big valley with lots of end yes')
+    expect(page).to have_content('95.00')
+    expect(page).to have_content('2021-05-05')
+    expect(page).to have_content('2021-05-06')
   end
+
+
 end
