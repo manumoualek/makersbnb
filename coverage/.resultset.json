@@ -100,13 +100,13 @@
           1,
           null,
           1,
-          1,
-          1,
+          2,
+          2,
           null,
           0,
           null,
           null,
-          1,
+          2,
           null,
           null,
           null,
@@ -167,7 +167,7 @@
           null
         ]
       },
-      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/spaces_new_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/spaces_new_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -187,6 +187,28 @@
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -251,6 +273,6 @@
         ]
       }
     },
-    "timestamp": 1629285179
+    "timestamp": 1629285805
   }
 }
