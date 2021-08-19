@@ -67,7 +67,7 @@ class User
       con = PG.connect(dbname: 'makersbnb')
     end 
     result = con.exec("SELECT userid FROM users WHERE username = '#{username}';").to_a
-    result[0]['userid']
+    result[0]['userid'].to_i
   end
 end
 
