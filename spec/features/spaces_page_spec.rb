@@ -15,12 +15,22 @@ feature "spaces page" do
   scenario "user should see space(s) on the page" do
     connection = PG.connect(dbname: 'makersbnb_test')
 
+    ###
+
+    connection.exec(
+      "INSERT INTO users (username, first_name, second_name, password, email)
+      VALUES ('Gandalf', 'The', 
+     'Grey', 'onering', 'todestroythemall@mordor.com');"
+   )
+   ###
+
     Space.create(
       space_name: 'Fanta house', 
       space_description: 'House that has a lot of fanta', 
       space_price: 95.00, 
       available_from: '2021-09-23', 
-      available_to: '2021-04-12'
+      available_to: '2021-04-12', 
+      userID: '1'
     )
 
     Space.create(
@@ -28,7 +38,8 @@ feature "spaces page" do
       space_description: 'House that has a lot of white people', 
       space_price: 100000.00, 
       available_from: '2024-09-23', 
-      available_to: '2030-04-12'
+      available_to: '2030-04-12',
+      userID: '2'
     )
 
     visit('/spaces')
