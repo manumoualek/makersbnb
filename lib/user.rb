@@ -59,5 +59,15 @@ class User
       end   
     end  
   end
+
+  def self.getID(username:)
+    if ENV['ENVIRONMENT'] == 'test'
+      con = PG.connect(dbname: 'makersbnb_test')
+    else
+      con = PG.connect(dbname: 'makersbnb')
+    end 
+    result = con.exec("SELECT userid FROM users WHERE username = '#{username}';").to_a
+    result[0]['userid']
+  end
 end
 

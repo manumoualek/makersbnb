@@ -35,10 +35,10 @@ class Makers_BnB < Sinatra::Base
   end 
 
   post '/testinglogin' do
-
     session[:logged_in] = User.auth(username: params[:username], password: params[:password])
     @logged_in = session[:logged_in]
     if @logged_in
+      session[:userID] = User.getID(username: params[:username])
       redirect '/spaces'
     else
       redirect '/login'
@@ -70,6 +70,7 @@ class Makers_BnB < Sinatra::Base
   end
 
   get '/booking' do
+    @userID = session[:userID]
     erb(:booking)
   end
 
