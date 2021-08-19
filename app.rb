@@ -77,5 +77,9 @@ class Makers_BnB < Sinatra::Base
     erb(:booking)
   end
 
+  get '/requests' do 
+    erb :requests
+  end 
+
   run! if app_file == $0
 end
