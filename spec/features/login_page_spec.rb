@@ -17,7 +17,7 @@ feature 'Login page 'do
     fill_in('password', with: "testpassword1")
     click_button('login')
 
-    expect(page).to have_content "Login to view Spaces"
+    expect(page).to have_content "Book a space!"
   end 
 
 end 
