@@ -5,6 +5,8 @@ check_out DATE,
 check_in DATE,
 guest INT,
 host INT,
+approved BOOLEAN, 
+
 CONSTRAINT fk_guest 
   FOREIGN KEY(guest)
     REFERENCES users(UserID),
