@@ -15,14 +15,11 @@ feature "spaces page" do
   scenario "user should see space(s) on the page" do
     connection = PG.connect(dbname: 'makersbnb_test')
 
-    ###
-
-    connection.exec(
+    connection.exec(  #This creates a second entry into the user table so two different users can list a space.
       "INSERT INTO users (username, first_name, second_name, password, email)
       VALUES ('Gandalf', 'The', 
      'Grey', 'onering', 'todestroythemall@mordor.com');"
    )
-   ###
 
     Space.create(
       space_name: 'Fanta house', 
