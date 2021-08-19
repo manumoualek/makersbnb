@@ -39,6 +39,7 @@ class Makers_BnB < Sinatra::Base
     @logged_in = session[:logged_in]
     if @logged_in
       session[:userID] = User.getID(username: params[:username])
+      #@userID = session[:userID]
       redirect '/spaces'
     else
       redirect '/login'
@@ -47,6 +48,7 @@ class Makers_BnB < Sinatra::Base
   
   get '/spaces' do
     @spaces = Space.all
+    #@userID = session[:userID]
     erb :spaces
   end
   
@@ -60,7 +62,8 @@ class Makers_BnB < Sinatra::Base
       space_description: params['listing_description'],
       space_price: params['listing_price_per_night'],
       available_from: params['listing_available_from'],
-      available_to: params['listing_available_to']
+      available_to: params['listing_available_to'],
+      userID: params['userID']     
     )
     redirect '/spaces'
   end
