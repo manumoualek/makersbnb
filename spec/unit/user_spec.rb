@@ -60,10 +60,16 @@ describe User do
       expect(temp).to eq true
     end 
 
-
     it 'redirects to the login page if the username and passwords DO NOT match' do 
       temp = User.auth(username: 'testlogin1', password:'WRONGPASSWORD')
       expect(temp).to eq false
     end 
+
+    it "returns false when the username doesn't exist in the table" do 
+      temp = User.auth(username: 'wronglogin', password:'wrongpassword')
+      expect(temp).to eq false
+    end
   end
+
+
 end
