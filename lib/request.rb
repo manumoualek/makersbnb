@@ -1,11 +1,7 @@
+
+require 'database_connection.rb'
+
 class Request
-  def self.db_connect
-    if ENV['ENVIRONMENT'] == 'test'
-      return connection = PG.connect(dbname: 'makersbnb_test')
-    else
-      return connection = PG.connect(dbname: 'makersbnb')
-    end
-  end
   
   def self.create(space_id: , check_out: , check_in: , guest: , host: , approved:)
     db_connect.exec(
@@ -14,4 +10,16 @@ class Request
       '#{check_in}', '#{guest}', '#{host}', '#{approved}');"
     )
   end  
-end
+
+
+  def self.host_request(userid:) 
+    hosts_request  = db_connect.exec(
+      "SELECT * FROM requests WHERE host = '#{userid}';").to_a
+  end 
+
+  def self.guest_request(userid:)
+    guest_request = db_connect.exec(
+      "SELECT * FROM requests WHERE guest = '#{userid}';").to_a
+  end 
+end  
+
