@@ -18,6 +18,7 @@ class Space
     )
 
   end
+
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
@@ -26,5 +27,14 @@ class Space
     end
 
     connection.exec("SELECT * FROM spaces;")
+  end
+
+  def self.booking_space(spaceid:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+    connection.exec("SELECT * FROM spaces WHERE spaceid = '#{spaceid.to_i}';").to_a
   end
 end
