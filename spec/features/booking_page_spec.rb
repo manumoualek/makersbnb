@@ -16,6 +16,9 @@ feature "can get values of the space the user has chosen" do
     expect(current_path).to eq('/booking')
     expect(page).to have_content("min = 2021-12-01")
     expect(page).to have_content("max = 2021-12-23")
-
+  end
+  
+  scenario "user can select a date and book the space" do
+    
   end
 end

@@ -35,6 +35,6 @@ class Space
     else
       connection = PG.connect(dbname: 'makersbnb')
     end
-    connection.exec("SELECT * FROM spaces WHERE spaceid = '#{spaceid}';").to_a
+    connection.exec("SELECT * FROM spaces WHERE spaceid = '#{spaceid.to_i}';").to_a
   end
 end
