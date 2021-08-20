@@ -435,9 +435,53 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/unit/requests_spec.rb": {
+      "/Users/manu/Projects/makersbnb/spec/unit/request_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/manu/Projects/makersbnb/lib/request.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       },
       "/Users/manu/Projects/makersbnb/spec/unit/space_spec.rb": {
@@ -540,6 +584,6 @@
         ]
       }
     },
-    "timestamp": 1629452849
+    "timestamp": 1629454799
   }
 }
