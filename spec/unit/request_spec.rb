@@ -52,7 +52,7 @@ describe Request do
       connection.exec("INSERT INTO spaces (space_name, userid, space_description, space_price, available_from, available_to)
                                   values ('testspace2', '2', 'This is the test space2', '99.99', '2022-05-22', '2022-05-22');")
       
-      Request.create(space_id: '2' , check_out: "2024-05-06" , check_in: '2024-05-05' , guest:'1' , host: '2' , approved: 'f')#spaceid 2 owned by testuser2 (userid_2)
+      Request.create(space_id: '2' , check_out: "2024-05-06" , check_in: '2024-05-05' , guest:'1' , host: '2' , approved: 'f')#spaceid 2 owned by testuser2 (userid_2), user_id 1 has requested this space
 
       expect(Request.guest_request(userid: 1).length).to eq 1
 

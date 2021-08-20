@@ -18,5 +18,4 @@ class Request
     guest_request = db_connect.exec(
       "SELECT * FROM requests WHERE guest = '#{userid}';").to_a
   end 
-
 end  
