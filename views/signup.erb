@@ -5,31 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign up page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=".css">
   </head>
   <body>
-  
-  <h1>Sign up to Makers BnB!</h1>
+    <div class="form-style">
+      <h2>Sign up to Makers BnB!</h2>
+      
+      <form action="/signup" method="post">
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="first_name">First name</label><br>
+        <input type="text" id="first_name" name="first_name"><br><br>
+        <label for="second_name">Second name</label><br>
+        <input type="text" id="second_name" name="second_name"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <br>
+        <div>
+          <input type='submit' value='Submit' class="button">
+        </div>
+      </form>
+    </div>
+    <div class="login-redirect">
+      <h1>Already have an account?</h1>
+      <form action='/login' method='get'>
+      <input type='submit' value='Login' class="button">
+    </div>
+    </form>
 
-  <form action="/signup" method="post">
-    <label for="username">Username</label><br>
-    <input type="text" id="username" name="username"><br><br>
-    <label for="first_name">First name</label><br>
-    <input type="text" id="first_name" name="first_name"><br><br>
-    <label for="second_name">Second name</label><br>
-    <input type="text" id="second_name" name="second_name"><br><br>
-    <label for="password">Password</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <label for="email">Email</label><br>
-    <input type="text" id="email" name="email"><br><br>
-    <br>
-    <input type='submit' value='Submit'>
-  </form>
 
-  <h1>Already have an account?</h1>
-  <form action='/login' method='get'>
-  <input type='submit' value='Login'>
-  </form>
+
+  <style>
+
+    body {
+        background-color: #d7d7d7;
+    }
+
+    .form-style {
+      width: 500px;
+      padding: 30px;
+      background: #FFFFFF;
+      margin: 50px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    }
+
+    .form-style h2 {
+      
+      background: #4D4D4D;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 100;
+      padding: 20px;
+      margin: -30px -30px 30px -30px;
+    }
+
+    .form-style input[type="text"],
+    .form-style input[type="password"],
+    .form-style textarea,
+    .form-style select 
+    {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      outline: none;
+      display: block;
+      width: 100%;
+      padding: 7px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      background: transparent;
+      margin-bottom: 10px;
+      font: 16px Arial, Helvetica, sans-serif;
+      height: 45px;
+    }
+
+    .form-style textarea{
+      resize:none;
+      overflow: hidden;
+    }
+
+    .button {
+      border: none;
+      background: #404040;
+      color: #ffffff !important;
+      font-weight: 100;
+      padding: 20px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+    }
+
+    .button:hover {
+      color: #404040 !important;
+      font-weight: 700 !important;
+      letter-spacing: 3px;
+      background: none;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      transition: all 0.3s ease 0s;
+    }
+    
+    .login-redirect {
+      text-align: center;
+    }
+    
+  </style>
+
+  <script>
+    //auto expand textarea
+    function adjust_textarea(h) {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+  </script>
 
   </body>
 </html>

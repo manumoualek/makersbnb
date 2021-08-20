@@ -8,30 +8,119 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+  <div class="form-style">
+    <%= session[:userID] %>
 
-  <%= session[:userID] %>
+    <h2>List a space!</h2><br>
 
-  <h1>List a space!</h1><br>
+    <form action="/spaces/new" method="post">
+      <label for="listing_name">Name</label><br><br>
+      <input type="text" id="listing_name" name="listing_name"><br><br>
+      <label for="listing_description">Description</label><br><br>
+      <input type="text" id="listing_description" name="listing_description"><br><br>
+      <label for="listing_price_per_night">Price per night ($)</label><br><br>
+      <input type="text" id="listing_price_per_night" name="listing_price_per_night"><br><br>
 
-  <form action="/spaces/new" method="post">
-    <label for="listing_name">Name</label><br><br>
-    <input type="text" id="listing_name" name="listing_name"><br><br>
-    <label for="listing_description">Description</label><br><br>
-    <input type="text" id="listing_description" name="listing_description"><br><br>
-    <label for="listing_price_per_night">Price per night ($)</label><br><br>
-    <input type="text" id="listing_price_per_night" name="listing_price_per_night"><br><br>
+      <label for="listing_available_from">Available from (DD/MM/YY)</label><br><br>
+      <input type="date" id="listing_available_from" name="listing_available_from"><br><br><br><br>
 
-    <label for="listing_available_from">Available from (DD/MM/YY)</label><br><br>
-    <input type="date" id="listing_available_from" name="listing_available_from"><br><br>
+      <label for="listing_available_to">Available to (DD/MM/YY)</label><br><br>
+      <input type="date" id="listing_available_to" name="listing_available_to"><br><br>
 
-    <label for="listing_available_to">Available to (DD/MM/YY)</label><br><br>
-    <input type="date" id="listing_available_to" name="listing_available_to"><br><br>
+      <input type="text" id="userID" name="userID" value="<%= session[:userID] %>"><br><br>
 
-    <input type="text" id="userID" name="userID" value="<%= session[:userID] %>"><br><br>
+      <input type="submit" value="List my space" class="button">
+    </form>
+  </div>
 
-    <input type="submit" value="List my space">
-  </form>
 
+  <style>
+
+  body {
+        background-color: #d7d7d7;
+  }
+
+  .form-style {
+    width: 500px;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  .form-style h2 {
+    
+    background: #4D4D4D;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+  }
+
+  .form-style input[type="text"],
+  .form-style input[type="password"],
+  .form-style textarea,
+  .form-style select 
+  {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+  }
+
+  .form-style textarea{
+    resize:none;
+    overflow: hidden;
+  }
+
+  .button {
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+  }
+
+  .button:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+  }
+  
+  .login-redirect {
+    text-align: center;
+  }
+  
+</style>
+
+<script>
+  //auto expand textarea
+  function adjust_textarea(h) {
+      h.style.height = "20px";
+      h.style.height = (h.scrollHeight)+"px";
+  }
+</script>
   
   </body>
 </html>
