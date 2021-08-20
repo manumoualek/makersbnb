@@ -11,6 +11,15 @@ feature 'Login page 'do
     click_button('login')
   end
 
+  scenario 'User can add the incorrect details to log in ' do 
+    visit '/login'
+    fill_in('username', with: "wronglogin")
+    fill_in('password', with: "wrongpassword")
+    click_button('login')
+    expect(page).to have_content "Login page"
+  end
+
+
   scenario 'checks if the data entered is a valid log in' do
     visit '/login'
     fill_in('username', with: "testlogin1")

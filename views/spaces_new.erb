@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+  <%= session[:userID] %>
+
   <h1>List a space!</h1><br>
 
   <form action="/spaces/new" method="post">
@@ -23,6 +26,8 @@
 
     <label for="listing_available_to">Available to (DD/MM/YY)</label><br><br>
     <input type="date" id="listing_available_to" name="listing_available_to"><br><br>
+
+    <input type="text" id="userID" name="userID" value="<%= session[:userID] %>"><br><br>
 
     <input type="submit" value="List my space">
   </form>

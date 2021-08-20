@@ -4,7 +4,7 @@ describe "space" do
       connection = PG.connect(dbname: 'makersbnb_test')
 
         Space.create(space_name: "Valley of the end", space_description: "Very big valley with lots of end yes", 
-          space_price: "95.00", available_from: "2021/05/05", available_to: "2021/05/06")
+          space_price: "95.00", available_from: "2021/05/05", available_to: "2021/05/06", userID: '1')
 
         result = connection.exec("SELECT * FROM spaces;").to_a
 

@@ -18,4 +18,7 @@ feature 'homepage' do
     expect(current_path).to eq('/login')
     expect(page).to have_content('Login page')
   end
+
+  
+
 end
