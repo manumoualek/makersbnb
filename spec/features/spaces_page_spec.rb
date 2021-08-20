@@ -36,7 +36,7 @@ feature "spaces page" do
       space_price: 100000.00, 
       available_from: '2024-09-23', 
       available_to: '2030-04-12',
-      userID: '2'
+      userID: '1'
     )
 
     visit('/spaces')
