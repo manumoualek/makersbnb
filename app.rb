@@ -79,7 +79,7 @@ class Makers_BnB < Sinatra::Base
     erb(:booking)
   end
 
-  post '/booking/confirmation' do
+  post '/booking/requested' do
     Request.create(
       space_id: params[:spaceid], 
       check_out: params[:booking_date],
@@ -88,11 +88,11 @@ class Makers_BnB < Sinatra::Base
       host: params[:host],
       approved: 'f'
     )
-    redirect('/booking/confirmation')
+    redirect('/booking/requested')
   end
 
-  get '/booking/confirmation' do
-    erb(:booking_complete)
+  get '/booking/requested' do
+    erb(:booking_requested)
   end
 
   get '/requests' do 

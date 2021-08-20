@@ -1,6 +1,6 @@
 Book a date!
 
-<form action="/booking/confirmation" method="post">
+<form action="/booking/requested" method="post">
 <input type="date" name="booking_date" min="<%= @booking_space[0]['available_from'] %>" max="<%= @booking_space[0]['available_to'] %>">
 <input type="hidden" name="spaceid" value = "<%= @booking_space[0]['spaceid'] %>">
 <input type="hidden" name="host" value = "<%= @booking_space[0]['userid'] %>">
