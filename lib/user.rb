@@ -1,36 +1,22 @@
-
-require 'pg'
-
+require 'database_connection.rb' #This isn't needed, but I'm too scared to remove it as I'm unsure why it isn't needed.
 class User
 
   def self.create(username:, first_name:, second_name:, password:, email:)
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makersbnb_test')
-    else
-      connection = PG.connect(dbname: 'makersbnb')
-    end
-    
     if self.username_available?(username: username) == false
       return '/username_already_exists'
 
     else
-      connection.exec(
+      db_connect.exec(
       "INSERT INTO users (username, first_name, second_name, password, email)
        VALUES ('#{username}', '#{first_name}', 
       '#{second_name}', '#{password}', '#{email}');"
     )
       return '/login'
-
     end
   end
 
   def self.username_available?(username:)
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makersbnb_test')
-    else
-      connection = PG.connect(dbname: 'makersbnb')
-    end
-    result = connection.exec("SELECT * FROM users WHERE username = '#{username}';").to_a
+    result = db_connect.exec("SELECT * FROM users WHERE username = '#{username}';").to_a
 
     if result.length == 0 
       true
@@ -40,15 +26,9 @@ class User
   end
   
   def self.auth(username:, password:)
-    if ENV['ENVIRONMENT'] == 'test'
-      con = PG.connect(dbname: 'makersbnb_test')
-    else
-      con = PG.connect(dbname: 'makersbnb')
-    end 
 
-    
-     
-    login_details = con.exec("SELECT * FROM users WHERE username ='#{username}';").to_a
+    login_details = db_connect.exec("SELECT * FROM users WHERE username ='#{username}';").to_a
+
     if login_details.length == 0
       return false 
     else
@@ -61,13 +41,21 @@ class User
   end
 
   def self.getID(username:)
-    if ENV['ENVIRONMENT'] == 'test'
-      con = PG.connect(dbname: 'makersbnb_test')
-    else
-      con = PG.connect(dbname: 'makersbnb')
-    end 
-    result = con.exec("SELECT userid FROM users WHERE username = '#{username}';").to_a
-    result[0]['userid'].to_i
+    result = db_connect.exec("SELECT userid FROM users WHERE username = '#{username}';").to_a
+    result[0]['userid']
+    #to_i
   end
+
+  def self.get_username(username:) #This doesn't work, but why!?!?!
+    return db_connect.exec("SELECT * FROM users WHERE username ='#{username}';").to_a
+  end 
+
+
 end
+
+
+
+
+
+
 

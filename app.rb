@@ -3,6 +3,7 @@ require 'pg'
 require 'sinatra/reloader'
 require_relative './lib/user'
 require_relative './lib/space'
+require_relative './lib/request'
 
 class Makers_BnB < Sinatra::Base 
   
@@ -74,7 +75,24 @@ class Makers_BnB < Sinatra::Base
 
   get '/booking' do
     @userID = session[:userID]
+    @booking_space = Space.booking_space(spaceid: params[:spaceid])
     erb(:booking)
+  end
+
+  post '/booking/requested' do
+    Request.create(
+      space_id: params[:spaceid], 
+      check_out: params[:booking_date],
+      check_in: params[:booking_date],
+      guest: params[:guest],
+      host: params[:host],
+      approved: 'f'
+    )
+    redirect('/booking/requested')
+  end
+
+  get '/booking/requested' do
+    erb(:booking_requested)
   end
 
   get '/requests' do 

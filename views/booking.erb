@@ -1,2 +1,17 @@
-<input type="date" name="from" min="2021-08-11" max="2021-08-15">
-<%= @userID %>
+Book a date!
+
+<form action="/booking/requested" method="post">
+<input type="date" name="booking_date" min="<%= @booking_space[0]['available_from'] %>" max="<%= @booking_space[0]['available_to'] %>">
+<input type="hidden" name="spaceid" value = "<%= @booking_space[0]['spaceid'] %>">
+<input type="hidden" name="host" value = "<%= @booking_space[0]['userid'] %>">
+<input type="hidden" name="guest" value = "<%= @userID %>">
+<input type="submit" value="Confirm booking date"> 
+
+</form>
+
+<br><br><br>
+userID = <%= @userID %>
+<br>
+<%= @booking_space %> <br>
+min = <%= @booking_space[0]['available_from'] %> <br>
+max = <%= @booking_space[0]['available_to'] %> <br>

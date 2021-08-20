@@ -41,8 +41,11 @@
       <%= space['available_from'] %><br>
       <b>Available_to:</b>
       <%= space['available_to'] %>
+      <form action="/booking" method="get">
+      <input type="hidden" name="spaceid" value="<%= space['spaceid'] %>"><br>
+      <input type="submit" id="<%= space['spaceid'] %>" value="Book">
+      </form>
       </li>
-      <br>
       <hr>
     <% end %>
   </ul>

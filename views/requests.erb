@@ -2,6 +2,8 @@ Requests
 
 "Requests I've made:"
 
+Requests for my space
+
 ##Use the spaceid FK to get the corresponding spacename 
 
 post '/requests' do 
@@ -25,23 +27,3 @@ end                                          |    end
 space name  |   check in  | approved?        |    space name  |   check in  | approved?
 ------------------------
 
-  ##Will need to amend requests table to inc approved column
-
-
-#Using the user ID it should query the table for any requests and return them to 
-the requests page
-  - In the controller do a post request which takes the user ID as the param and queries
-    select * from requests where guests == userid
-  - This would then display check in date and whether the request has been approved or not
-
-    
-
-
-
-These should then be rendered in the requests I've made section
-
-
-When looking at requests made for on of your property
- - In the controller do a post request which takes the user ID as the param and queries
-    select * from requests where host == userid
- - 
