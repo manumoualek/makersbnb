@@ -12,9 +12,11 @@ class Request
   def self.host_request(userid:) 
     hosts_request  = db_connect.exec(
       "SELECT * FROM requests WHERE host = '#{userid}';").to_a
-  
+  end 
 
-    
+  def self.guest_request(userid:)
+    guest_request = db_connect.exec(
+      "SELECT * FROM requests WHERE guest = '#{userid}';").to_a
   end 
 
 end  
