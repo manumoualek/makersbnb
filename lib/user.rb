@@ -1,4 +1,4 @@
-require 'database_connection.rb' #This isn't needed, but I'm too scared to remove it as I'm unsure why it isn't needed.
+require_relative './database_connection.rb' #This isn't needed, but I'm too scared to remove it as I'm unsure why it isn't needed.
 class User
 
   def self.create(username:, first_name:, second_name:, password:, email:)

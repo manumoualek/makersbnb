@@ -67,7 +67,7 @@ feature "spaces page" do
     )
     
     visit('/spaces')
-    click_button('Book')
+    find('#2').click
     expect(current_path).to eq('/booking')
     expect(page).to have_content('Book a date!')
   end

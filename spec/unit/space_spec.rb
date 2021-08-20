@@ -20,7 +20,7 @@ describe "space" do
 
       connection.exec(
         "INSERT INTO spaces (spaceid, space_name, space_description, space_price, available_from, available_to, userid)
-         VALUES ('1', 'Pizza place', 'Lots of pizza', 
+         VALUES ('4', 'Pizza place', 'Lots of pizza', 
         '40', '2021-06-23', '2021-06-25', '1');"
       )
       connection.exec(

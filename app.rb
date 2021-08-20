@@ -4,6 +4,7 @@ require 'sinatra/reloader'
 require_relative './lib/user'
 require_relative './lib/space'
 require_relative './lib/request'
+require_relative './lib/database_connection.rb'
 
 class Makers_BnB < Sinatra::Base 
   

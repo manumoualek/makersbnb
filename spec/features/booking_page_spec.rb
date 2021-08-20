@@ -3,7 +3,7 @@ feature "can get values of the space the user has chosen" do
     connection = PG.connect(dbname: 'makersbnb_test')
 
     connection.exec("INSERT INTO spaces (spaceid, available_from, available_to, userid) 
-       VALUES ('1', '2021-12-01', '2021-12-23', '1');")
+       VALUES ('4', '2021-12-01', '2021-12-23', '1');")
 
     connection.exec("INSERT INTO spaces (spaceid, available_from, available_to, userid) 
        VALUES ('2', '2021-12-01', '2021-12-23', '1');")
