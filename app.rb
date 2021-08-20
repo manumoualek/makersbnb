@@ -74,6 +74,7 @@ class Makers_BnB < Sinatra::Base
 
   get '/booking' do
     @userID = session[:userID]
+    @booking_space = Space.booking_space(spaceid: params[:spaceid])
     erb(:booking)
   end
 
