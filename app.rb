@@ -63,7 +63,7 @@ class Makers_BnB < Sinatra::Base
       space_price: params['listing_price_per_night'],
       available_from: params['listing_available_from'],
       available_to: params['listing_available_to'],
-      userID: params['userID']     
+      userID: params['userID']
     )
     redirect '/spaces'
   end
