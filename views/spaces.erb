@@ -30,7 +30,7 @@
     <% @spaces.each do |space| %>
       <hr>
       <li style="list-style-type: none;">
-      <a href="/booking" style="text-decoration: none;"><%= space['space_name'] %></a><br>
+      <b><%= space['space_name'] %></b><br>
       <b>Description:</b>
       <%= space['space_description'] %><br>
       <b>Price per night:</b>
@@ -39,8 +39,11 @@
       <%= space['available_from'] %><br>
       <b>Available_to:</b>
       <%= space['available_to'] %>
+      <form action="/booking" method="get">
+      <input type="hidden" name="spaceid" value="<%= space['spaceid'] %>"><br>
+      <input type="submit" value="Book">
+      </form>
       </li>
-      <br>
       <hr>
     <% end %>
   </ul>

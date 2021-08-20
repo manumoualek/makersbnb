@@ -54,4 +54,21 @@ feature "spaces page" do
     expect(page).to have_content("2030-04-12")
 
   end
+
+  scenario "user can click a 'book' button on a space which takes them to the booking page" do
+    
+    Space.create(
+      space_name: 'White house', 
+      space_description: 'House that has a lot of white people', 
+      space_price: 100000.00, 
+      available_from: '2024-09-23', 
+      available_to: '2030-04-12',
+      userID: '1'
+    )
+    
+    visit('/spaces')
+    click_button('Book')
+    expect(current_path).to eq('/booking')
+    expect(page).to have_content('Book a date!')
+  end
 end

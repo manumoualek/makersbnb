@@ -15,4 +15,10 @@ describe "space" do
         expect(result[0]['available_to']).to eq('2021-05-06')
     end
   end
+
+  describe "Booking_space method" do
+    it "Returns the space the user wishes to book via its spaceID" do
+      
+    end
+  end
 end
