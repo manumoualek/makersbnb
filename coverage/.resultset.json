@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/manu/Projects/makersbnb/app.rb": {
+      "/Users/Student/Projects/makersbnb/app.rb": {
         "lines": [
           1,
           1,
@@ -90,7 +90,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/lib/user.rb": {
+      "/Users/Student/Projects/makersbnb/lib/user.rb": {
         "lines": [
           null,
           1,
@@ -98,12 +98,6 @@
           1,
           null,
           1,
-          5,
-          5,
-          null,
-          0,
-          null,
-          null,
           5,
           2,
           null,
@@ -117,13 +111,7 @@
           null,
           null,
           null,
-          null,
           1,
-          7,
-          7,
-          null,
-          0,
-          null,
           7,
           null,
           7,
@@ -134,13 +122,6 @@
           null,
           null,
           1,
-          6,
-          6,
-          null,
-          0,
-          null,
-          null,
-          null,
           null,
           6,
           6,
@@ -158,29 +139,19 @@
           2,
           2,
           null,
-          0,
-          null,
-          2,
-          2,
-          null,
           null,
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/lib/space.rb": {
+      "/Users/Student/Projects/makersbnb/lib/space.rb": {
         "lines": [
           1,
           null,
           1,
+          null,
+          1,
           3,
-          3,
           null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          3,
           null,
           null,
           null,
@@ -188,17 +159,22 @@
           null,
           1,
           6,
-          6,
+          null,
+          null
+        ]
+      },
+      "/Users/Student/Projects/makersbnb/lib/database_connection.rb": {
+        "lines": [
+          1,
+          28,
+          28,
           null,
           0,
           null,
-          null,
-          6,
-          null,
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/homepage_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
@@ -226,7 +202,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/login_page_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/login_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -262,7 +238,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/requests_page_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/requests_page_spec.rb": {
         "lines": [
           null,
           1,
@@ -279,7 +255,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/signup_page_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/signup_page_spec.rb": {
         "lines": [
           1,
           null,
@@ -332,7 +308,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/spaces_new_page_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/spaces_new_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -374,7 +350,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/features/spaces_page_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/features/spaces_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -435,7 +411,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/unit/request_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/unit/request_spec.rb": {
         "lines": [
           1,
           null,
@@ -446,32 +422,28 @@
           null,
           1,
           null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/manu/Projects/makersbnb/lib/request.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
           1,
           null,
           0,
           null,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Student/Projects/makersbnb/lib/request.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
           1,
           null,
           null,
@@ -484,7 +456,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/unit/space_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/unit/space_spec.rb": {
         "lines": [
           1,
           1,
@@ -504,7 +476,7 @@
           null
         ]
       },
-      "/Users/manu/Projects/makersbnb/spec/unit/user_spec.rb": {
+      "/Users/Student/Projects/makersbnb/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -584,6 +556,6 @@
         ]
       }
     },
-    "timestamp": 1629454799
+    "timestamp": 1629458677
   }
 }
