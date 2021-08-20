@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Student/Projects/makersbnb/app.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/app.rb": {
         "lines": [
           1,
           1,
@@ -90,7 +90,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/lib/user.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/lib/user.rb": {
         "lines": [
           null,
           1,
@@ -167,9 +167,10 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/lib/space.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/lib/space.rb": {
         "lines": [
           1,
+          null,
           null,
           1,
           4,
@@ -186,6 +187,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           6,
           6,
@@ -198,7 +201,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/homepage_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/homepage_spec.rb": {
         "lines": [
           1,
           1,
@@ -226,7 +229,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/login_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/login_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -262,7 +265,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/requests_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/requests_spec.rb": {
         "lines": [
           null,
           1,
@@ -279,7 +282,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/signup_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/signup_page_spec.rb": {
         "lines": [
           1,
           null,
@@ -332,7 +335,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/spaces_new_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/spaces_new_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -374,7 +377,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/features/spaces_page_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/features/spaces_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -435,7 +438,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/unit/space_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/space_spec.rb": {
         "lines": [
           1,
           1,
@@ -457,7 +460,7 @@
           null
         ]
       },
-      "/Users/Student/Projects/makersbnb/spec/unit/user_spec.rb": {
+      "/Users/dylansmakersmac/Desktop/code_bank/makersbnb/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -537,6 +540,6 @@
         ]
       }
     },
-    "timestamp": 1629385606
+    "timestamp": 1629456160
   }
 }
