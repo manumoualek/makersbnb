@@ -92,9 +92,7 @@
       },
       "/Users/Student/Projects/makersbnb/lib/user.rb": {
         "lines": [
-          null,
           1,
-          null,
           1,
           null,
           1,
@@ -124,6 +122,7 @@
           1,
           null,
           6,
+          null,
           6,
           2,
           null,
@@ -139,6 +138,31 @@
           2,
           2,
           null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Student/Projects/makersbnb/lib/database_connection.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          28,
+          28,
+          null,
+          0,
           null,
           null
         ]
@@ -159,17 +183,6 @@
           null,
           1,
           6,
-          null,
-          null
-        ]
-      },
-      "/Users/Student/Projects/makersbnb/lib/database_connection.rb": {
-        "lines": [
-          1,
-          28,
-          28,
-          null,
-          0,
           null,
           null
         ]
@@ -556,6 +569,6 @@
         ]
       }
     },
-    "timestamp": 1629458677
+    "timestamp": 1629459785
   }
 }
