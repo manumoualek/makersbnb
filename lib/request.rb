@@ -9,4 +9,12 @@ class Request
     )
   end  
 
+  def self.host_request(userid:) 
+    hosts_request  = db_connect.exec(
+      "SELECT * FROM requests WHERE host = '#{userid}';").to_a
+  
+
+    
+  end 
+
 end  
