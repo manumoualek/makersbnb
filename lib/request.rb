@@ -1,4 +1,6 @@
+
 require 'database_connection.rb'
+
 class Request
   
   def self.create(space_id: , check_out: , check_in: , guest: , host: , approved:)
@@ -8,6 +10,7 @@ class Request
       '#{check_in}', '#{guest}', '#{host}', '#{approved}');"
     )
   end  
+
 
   def self.host_request(userid:) 
     hosts_request  = db_connect.exec(
@@ -19,3 +22,4 @@ class Request
       "SELECT * FROM requests WHERE guest = '#{userid}';").to_a
   end 
 end  
+

@@ -43,6 +43,7 @@ class User
   def self.getID(username:)
     result = db_connect.exec("SELECT userid FROM users WHERE username = '#{username}';").to_a
     result[0]['userid']
+    #to_i
   end
 
   def self.get_username(username:) #This doesn't work, but why!?!?!

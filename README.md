@@ -112,3 +112,6 @@ As a host of Makers BnB
 So that I dont lose out on potential guests
 I want my spaces to still be available until a user has confirmed
 ```
+
+Relational Databases
+![Diagram for relational databases](./images/Makers_bnb_relational_databases.png)
